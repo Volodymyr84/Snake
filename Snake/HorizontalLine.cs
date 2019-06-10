@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class HorizontalLine
+    class HorizontalLine:Figure
     {
-        List<Point> pList;
-
         public HorizontalLine(int xLeft, int xRight, int y, char sym)//конструктор що викликається при створенні лінії
         {
             pList = new List<Point>(); //створюємо пустий список
@@ -20,14 +18,6 @@ namespace Snake
                 pList.Add(p);
             }
 
-        }
-
-        public void Drow()
-        {
-            foreach (Point p in pList)
-            {
-                p.Draw();
-            }
         }
     }
 }
